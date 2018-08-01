@@ -1,0 +1,26 @@
+
+<div class="title-area">
+  <div class="title-text">Login</div>
+  <!-- <div class="spacer"></div> -->
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="login()">
+<div class="content-area">
+  <div>
+      <input type="text" placeholder="&#xf0e0; Enter username" formControlName="username" required>
+  </div>
+  <div>
+      <input type="password"  placeholder="&#xf023; Enter password" formControlName="password" required>
+  </div>
+  <div class="forgot-password">Forgot Password</div>
+  <div class="button-area">
+      <button type="submit" class="tl-btn">
+          <div class="btn-label">Login</div>
+      </button>
+  </div>
+</div>
+</form>
+

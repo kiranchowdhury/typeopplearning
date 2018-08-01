@@ -1,0 +1,92 @@
+<!-- <p>
+  profiles-container works!
+</p> -->
+
+<div class="row profile-page-row">
+  <span class="tab-title">
+     Profile Page
+  </span>
+  <div class="col-md-12">
+      <!-- <form action="#" class="form-horizontal"> -->
+          <div class="form-body">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="form-group row">
+                          <label class="control-label col-md-3">Full Name:</label>
+                          <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="profileDetail.name">
+                              <!-- <small class="form-control-feedback"> This is inline help </small>  -->
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="control-label col-md-3">Profile Photo:</label>
+                          <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img class="profile-img" >
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <tl-button class="btn-120w" [icon]="'fa fa-camera'">
+                                                <span btnlabel> Change Photo</span>
+                                            </tl-button>
+                                            <div class="gap-small"></div>
+                                            <tl-button class="btn-120w" [icon]="'fa fa-times-circle'">
+                                                <span btnlabel> Remove Photo</span>
+                                            </tl-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="control-label col-md-3">Email:</label>
+                          <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="User Email" [(ngModel)]="profileDetail.email">
+                              <!-- <small class="form-control-feedback"> This is inline help </small>  -->
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="control-label col-md-3">Phone:</label>
+                          <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Contact" [(ngModel)]="profileDetail.phone">
+                              <!-- <small class="form-control-feedback"> This is inline help </small>  -->
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <label class="control-label col-md-3">Address:</label>
+                          <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Address" [(ngModel)]="profileDetail.address">
+                              <!-- <small class="form-control-feedback"> This is inline help </small>  -->
+                          </div>
+                      </div>
+                      <div class="form-group row" [hidden]="currentUser.role!='CUSTOMER'">
+                          <label class="control-label col-md-3">Special Credits:</label>
+                          <div class="col-md-9">
+                              <input type="text" class="form-control" placeholder="Credits" [(ngModel)]="profileDetail.specialCredits">
+                              <!-- <small class="form-control-feedback"> This is inline help </small>  -->
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-9">
+
+                        </div>
+                        <div class="col-md-3">
+                          <tl-button [icon]="'fa fa-check-circle-o'" style="float: right;" (click)="saveProfileDetail(profileDetail)">
+                            <span btnlabel> Save</span>
+                          </tl-button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+
+
+          </div>
+
+      <!-- </form> -->
+  </div>
+</div>
+
+

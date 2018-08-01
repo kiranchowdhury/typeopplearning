@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+      <tr class="table-header">
+        <th scope="col">Equipment</th>
+        <th scope="col">Training Name</th>
+        <th scope="col">Date</th>
+        <th *ngIf="mode==='edit'" scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let trainingLib of trainingLibraries | trainingFilter: searchText">
+            <td *ngIf="mode==='view'">{{trainingLib.equipmentCategory}}</td>
+            <td *ngIf="mode==='view'">{{trainingLib.name}}</td>
+            <td *ngIf="mode==='view'">{{trainingLib.date | date: 'MM/dd/yyyy'}}</td>
+            <td *ngIf="mode==='edit'"><input class="form-control" type="text" (ngModelChange)="trackChange($event, trainingLib)" [(ngModel)]="trainingLib.equipmentCategory" ></td>
+            <td *ngIf="mode==='edit'"><input class="form-control" type="text" (ngModelChange)="trackChange($event, trainingLib)" [(ngModel)]="trainingLib.name"></td>
+            <td *ngIf="mode==='edit'"><input class="form-control" type="text" (ngModelChange)="trackChange($event, trainingLib)" [(ngModel)]="trainingLib.date"></td>
+            <td *ngIf="mode==='edit'">
+                <a (click)="onRemoveTraining(trainingLib)"><i class="fa fa-times-circle ic_close_edit_view"></i></a>
+            </td>
+        </tr>
+    </tbody>

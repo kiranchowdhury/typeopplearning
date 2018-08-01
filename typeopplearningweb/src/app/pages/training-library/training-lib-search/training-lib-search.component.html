@@ -1,0 +1,6 @@
+<div class="searchContainer">
+  <div class="searchBar">
+      <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search Training">
+  </div>
+  <tl-button-small [icon]="'fa fa-search'" (onClick)="searchTextUpdate($event)"></tl-button-small>
+</div>

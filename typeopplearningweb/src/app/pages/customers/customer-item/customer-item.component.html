@@ -1,0 +1,9 @@
+
+  <td *ngIf="mode==='view'">{{customer.name}}</td>
+  <td *ngIf="mode==='view'">{{customer.contactName}}</td>
+  <td *ngIf="mode==='view'">{{customer.noOfUsers}}</td>
+
+
+  <td *ngIf="mode==='edit'"><input type="text" [value]="customer.name" #nameedit></td>
+  <td *ngIf="mode==='edit'"><input type="text" [value]="customer.contactName" #contctnameedit></td>
+  <td *ngIf="mode==='edit'"><input type="text" [value]="customer.noOfUsers" #nouseredit></td>

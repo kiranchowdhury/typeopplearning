@@ -1,0 +1,56 @@
+
+<div class="title-area">
+  <div class="title-text">{{dialogHeading}}</div>
+  <div class="loader-gmail" *ngIf="loading"></div>
+  <!-- <div class="spacer"></div> -->
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="form" (ngSubmit)="signup()" *ngIf="!resetPassword">
+  <div class="loading-message success" *ngIf="!loading && loadingMessage?.length">
+    {{loadingMessage}}
+  </div>
+  <div class="loading-message error" *ngIf="!loading && error">
+      {{error.message}}
+  </div>
+  <div class="content-area">
+  <div>
+      <input type="text" placeholder="&#xf0e0; Email" formControlName="email" required>
+  </div>
+  <div>
+      <input type="text"  placeholder="&#xf02b; Special credits" formControlName="specialcredit" required>
+  </div>
+  <div class="special-credits">What is special credits?</div>
+  <div class="button-area">
+      <button type="submit" class="tl-btn">
+          <div class="btn-label">Send</div>
+      </button>
+  </div>
+</div>
+</form>
+<form [formGroup]="passwordForm" (ngSubmit)="verifyPassword()" *ngIf="resetPassword">
+    <div class="loading-message success" *ngIf="!loading && loadingMessage?.length">
+        {{loadingMessage}}
+      </div>
+      <div class="loading-message error" *ngIf="!loading && error">
+          {{error.message}}
+      </div>
+  <div class="content-area">
+    <div>
+        <input type="password" placeholder="&#xf023; Password" formControlName="password" required>
+    </div>
+    <div class="special-credits" (click)="resendPassword()">Resend Password</div>
+    <div>
+      <input type="password"  placeholder="&#xf023; New Password" formControlName="newPassword" required>
+    </div>
+    <div>
+      <input type="password"  placeholder="&#xf023; Verify New Password" formControlName="cnfPassword" required>
+    </div>
+    <div class="button-area">
+        <button type="submit" class="tl-btn">
+            <div class="btn-label">Login</div>
+        </button>
+    </div>
+  </div>
+  </form>

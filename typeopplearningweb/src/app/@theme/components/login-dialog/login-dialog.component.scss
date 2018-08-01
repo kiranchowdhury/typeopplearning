@@ -1,0 +1,110 @@
+.title-area {
+    display: flex;
+    width: auto;
+    height: 80px;
+    background-color: #ffffff;
+    box-shadow: 0 0 13px 0 #e5e5e5;
+    // padding-top: 25px;
+    // padding-bottom: 24px;
+    // padding-left: 163px;
+    // padding-right: 162px;
+    .title-text {
+        margin: 25px 145px 24px 163px;
+        width: 101px;
+        height: 31px;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        color: #666666;
+    }
+    .spacer {
+        // flex: 0 0 auto;
+        // margin-left: auto;
+        flex-grow: 2;
+      }
+    .close {
+        margin-top: 30px;
+        margin-right: 30px;
+        width: 3px;
+        height: 24px;
+      //  background-color: #cccccc;
+       // margin-top: 28px;
+      //  margin-bottom: 28px;
+
+    }
+}
+.content-area {
+    // border: 2px solid black;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+    input {
+     margin: 23px 23px 0px 23px;
+     padding: 10px;
+     width: 380px;
+     height: 60px;
+     border-radius: 3.1px;
+     background-color: #fcfcfd;
+     border: solid 0.6px #cccccc;
+    font-family: FontAwesome;
+    }
+    .forgot-password {
+        margin: 23px 0px 0px 43px;
+        width: 140px;
+        height: 19px;
+        font-size: 16px;
+        text-align: left;
+        color: #0f72e2;
+        cursor: pointer;
+    }
+    .button-area {
+        margin: 50px 23px 50px 33px;
+        cursor: pointer;
+
+        button {
+            .btn-label {
+                margin: 15px 159px 14px 157px;
+                width: 64px;
+                height: 31px;
+                opacity: 0.96;
+                font-family: Helvetica;
+                font-size: 26px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+    }
+ }
+
+ .tl-btn {
+    cursor: pointer;
+    width: 380px;
+    height: 60px;
+    border-radius: 2px;
+    background-image: linear-gradient(279deg, #0f72e2, #09d1d6);
+}
+
+.input-group.has-person-icon {
+    position: relative;
+
+    .form-control {
+
+      padding-left: 3rem;
+    }
+
+    &::before {
+      content: '\F47D';
+      font-family: 'Ionicons';
+      font-size: 2rem;
+      position: absolute;
+      z-index: 100;
+      left: 1rem;
+      top: 0.25rem;
+    }
+  }

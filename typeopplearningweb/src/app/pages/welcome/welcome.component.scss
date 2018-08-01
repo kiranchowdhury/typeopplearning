@@ -1,0 +1,163 @@
+
+.mainBanner{
+    background: url('../../../assets/images/banner.png') 100%;
+    height: 590px;
+    clear: both;
+    }
+    .bannerContent{
+    width: 50%;
+    padding: 13% 0 0 13%;
+    }
+    .bannerContent h1{
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .bannerContent p{
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: left;
+    color: #ffffff;
+    padding: 32px 0 64px 0;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .bannerContent input{
+    border-radius: 2px;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #0f72e2;
+    padding: 20px 67px;
+    cursor: pointer;
+    border:none;
+    }
+    .featureSection{
+    width: 33.33%;
+    float:left;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 48px 0;
+    }
+    .featureSection h5{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #333f52;
+    padding:16px 0 8px 0;
+    }
+    .featureSection span{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666d78;
+    }
+    .careerPath{
+    background-color: #f2f2f2;
+    padding:51px 0px;
+    text-align: center;
+      clear: both;
+    }
+    .careerPath h1{
+    font-size: 48px;
+    font-weight: 300;
+    }
+    .service{
+    padding:4.4% 13.5%;
+    clear: both;
+    height: 275px;
+    }
+    .serviceMid{
+    background: #f2f2f2;
+    padding:4.4% 13.5%;
+    clear: both;
+    height: 55vh;
+    }
+    .leftService{
+    width: 50%;
+    float: left;
+    }
+    .leftService h3{
+    font-size: 34px;
+    line-height: 1.24;
+    text-align: left;
+    color: #333333;
+    }
+    .leftService p{
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: 17px;
+    line-height: 1.47;
+    text-align: left;
+    color: #333333;
+    }
+    .rightService{
+    width: 47%;
+    float: left;
+    padding-left: 3%;
+    padding-bottom: 3%;
+    }
+    .rightService img{
+    width: 100%;
+    }
+    .midPanelRight{
+    padding: 0;
+    width: 50%;
+    }
+    .midPanelLeft{
+    width: 47%;
+    padding-left: 3%;
+    }
+    .contactForm{
+    background: url('../../../assets/images/bkg-image-02.png') no-repeat;
+    clear: both;
+    height: 397px;
+    background-size: 100%;
+    }
+    .contactDiv{
+    clear: both;
+    float: right;
+    width: 35.1%;
+    height: 100%;
+    padding: 48px 32px;
+    background: rgba(0,0,0,0.7);
+    }
+    .contactDiv h2{
+    font-size: 40px;
+    text-align: left;
+    color: #ffffff;
+    padding-bottom: 32px;
+    }
+    .contactDetails{
+    display: table;
+    }
+    .contactDetails img{
+    float: left;
+    }
+    .sideDetails{
+    float: left;
+    padding: 0 0 25px 25px;
+    margin: -18px 0 0 0;
+    }
+    .sideDetails span{
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: left;
+    display: block;
+    color: #ffffff;
+    }
+    .sideDetails font{
+    font-family:'Roboto', sans-serif;
+    font-size: 17px;
+    line-height: 1.88;
+    text-align: left;
+    display: block;
+    color: #ddd;
+    width: 160px;
+    }
+    

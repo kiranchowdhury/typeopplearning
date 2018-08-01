@@ -1,0 +1,19 @@
+<ep-busy-indicator *ngIf="loading" [loadingMsg]="loadingMsg"></ep-busy-indicator>
+<div class="btn-right" *ngIf="mode==='view'">
+    <tl-button [icon]="'fa fa-plus-circle'" (onClick)="openNewUserDialog()">
+        <span btnlabel> New</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-edit'" (onClick)="toggleMode()">
+        <span btnlabel> Edit</span>
+    </tl-button>
+</div>
+<div class="btn-right" *ngIf="mode==='edit'">
+    <tl-button [icon]="'fa fa-check-circle-o'" (onClick)="saveClick()">
+        <span btnlabel> Save</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-times-circle-o'" (onClick)="toggleMode()">
+        <span btnlabel> Cancel</span>
+    </tl-button>
+</div>
+<tl-user-list-search #searchComp></tl-user-list-search>
+<tl-user-list-table  [mode]="mode" [searchText]="searchComp.search" (removeUserEvent)="onUserRemoveCallback($event)"></tl-user-list-table>

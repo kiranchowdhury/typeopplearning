@@ -1,0 +1,25 @@
+<div class="title-area">
+  <div class="title-text">{{header}}</div>
+  <!-- <div class="spacer"></div> -->
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form >
+<div class="content-area">
+  <div class="text-custom-style">
+
+    {{modalMessage}}
+  </div>
+  <div class="button-style">
+    <tl-button [icon]="'fa fa-check-circle-o'" (click)="removeBtn()">
+      <span btnlabel> Remove</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-times-circle-o'" (onClick)="closeModal()">
+        <span btnlabel> Cancel</span>
+    </tl-button>
+  </div>
+
+</div>
+</form>

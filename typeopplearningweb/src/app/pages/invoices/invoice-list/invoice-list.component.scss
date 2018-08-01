@@ -1,0 +1,30 @@
+.table-header {
+    width: 1040px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: rgba(15, 114, 226, 0.1);
+    color: #0f72e2;
+  }
+  .ic_close_edit_view {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    font-size: 28px;
+    color: red;
+    margin: 10px;
+    // transform: rotate(-315deg);
+  }
+  .download-style {
+    color: #0f72e2 !important;
+    padding: 5px 7px 5px 7px;
+    box-shadow: 0.1px 0.1px 0.1px 0.1px #0f72e2;
+  }
+  .status-paid{
+      color: green !important;
+  }
+  .status-sent{
+      color: #d6d60c !important;
+  }
+  .status-draft{
+      color: maroon !important;
+  }

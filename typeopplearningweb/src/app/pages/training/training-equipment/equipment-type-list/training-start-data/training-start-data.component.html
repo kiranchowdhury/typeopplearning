@@ -1,0 +1,44 @@
+<div class="row" >
+
+  <div class="col-md-8"><label class="label-min">Name :</label> <span class="span-style"> {{equipmentDetail.name}}</span> </div><div class="col-md-4"></div>
+  <div class="col-md-8"><label class="label-min">Training Category :</label> <span class="span-style">{{equipmentDetail.equipmentCategory}}</span> </div><div class="col-md-4 "></div>
+  <div class="col-md-8"><label class="label-min">EquipmentType :</label> <span class="span-style">{{equipmentDetail.equipmentType}}</span> </div><div class="col-md-4 "></div>
+  <div class="col-md-8"><label class="label-min">Manufacturer :</label> <span class="span-style">{{equipmentDetail.manufacturer}}</span> </div><div class="col-md-4 "></div>
+  <div class="col-md-8"><label class="label-min">Model :</label> <span class="span-style">{{equipmentDetail.model}}</span> </div><div class="col-md-4 "></div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-12">
+    <embed [attr.src]="equipmentDetail.document" type="application/pdf"  />
+    <object [data]="equipmentDetail.document" type="application/pdf" width="100%" height="100%"></object>
+
+
+  </div>
+</div>
+ -->
+ <!-- <pdf-viewer [src]="{url: 'https://vadimdez.github.io/ng2-pdf-viewer/pdf-test.pdf',withCredentials: true}" -->
+  <!-- <pdf-viewer [src]="'../../../../../../assets/sample-pdf/sample1.pdf'" -->
+  <pdf-viewer [src]="equipmentDetail.document"
+              [render-text]="true"
+              [show-all]="true"
+              (after-load-complete)="afterLoadComplete($event)"
+              style="display: block;"></pdf-viewer>
+
+<hr class="hr-style">
+
+<div class="row">
+  <div class="col-md-6 sign-in-style">To complete this training please sign of</div><div class="col-md-6"></div>
+  <div class="col-md-5">
+    <select class="select-style"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+      <option selected>Sign according to the name</option>
+      <option>Sign Please</option>
+    </select>
+  </div>
+  <div class="col-md-7"></div>
+  <div class="col-md-5">
+    <input type="text" class="select-style" placeholder="Enter the full name">
+  </div>
+  <div class="col-md-7"></div>
+  <div class="col-md-12"></div>
+  <div class="col-md-12"></div>
+  <div class="col-md-12"></div>
+</div>

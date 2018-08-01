@@ -1,0 +1,51 @@
+// @nebular theming framework
+// @import '~@nebular/theme/styles/theming';
+@import '../../../framework/theme/styles/_theming.scss';
+// @nebular out of the box themes
+// @import '~@nebular/theme/styles/themes';
+@import '../../../framework/theme/styles/_themes.scss';
+
+// which themes you what to enable (empty to enable all)
+$nb-enabled-themes: (default, cosmic);
+
+$nb-themes: nb-register-theme((
+ // app wise variables for each theme
+ color-fg: #2a2a2a,
+  menu-item-padding: 1.5rem 0.75rem,
+  menu-submenu-padding: 1.5rem 0.75rem,
+  sidebar-header-gap: 2rem,
+  sidebar-header-height: initial,
+  layout-content-width: 1400px,
+  layout-bg: #ffffff,
+   menu-active-bg: linear-gradient(284deg, #0f72e2, #09d1d6),
+   menu-submenu-active-border-color: #0f72e2,
+  // menu-submenu-active-fg: #2a2a2a,
+  // menu-submenu-active-bg: #FFFFFF,
+  // menu-submenu-bg:
+   // menu-active-fg: #FFFFFF,
+    menu-submenu-item-border-radius: 0px,
+    menu-submenu-item-border-width: .1rem,
+    menu-icon-font-size: 20px,
+    menu-submenu-bg: #FFFFFF,
+    menu-submenu-fg: #4b4b4b,
+    menu-submenu-active-fg: #2a2a2a,
+    menu-submenu-active-bg: #ffffff,
+    menu-submenu-hover-fg: #2a2a2a,
+    menu-submenu-hover-bg: #ffffff,
+
+//  menu-font-size: 20px,
+  // menu-item-separator: #FFFFFF,
+
+  font-main: Roboto,
+  font-secondary: Roboto,
+), default, default);
+
+$nb-themes: nb-register-theme((
+  // app wise variables for each theme
+  sidebar-header-gap: 2rem,
+  sidebar-header-height: initial,
+  layout-content-width: 1400px,
+
+  font-main: Roboto,
+  font-secondary: Exo,
+), cosmic, cosmic);

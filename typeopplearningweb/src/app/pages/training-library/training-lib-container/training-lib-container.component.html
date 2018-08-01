@@ -1,0 +1,22 @@
+
+<ep-busy-indicator *ngIf="loading" [loadingMsg]="loadingMsg"></ep-busy-indicator>
+<div class="customerAction" *ngIf="mode==='view'">
+    <tl-button [icon]="'fa fa-plus-circle'" (onClick)="openNewTrainingDialog()">
+        <span btnlabel> New</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-edit'" (onClick)="toggleMode()">
+        <span btnlabel> Edit</span>
+    </tl-button>
+</div>
+<div class="customerAction" *ngIf="mode==='edit'">
+    <tl-button [icon]="'fa fa-check-circle-o'" (onClick)="saveClick()">
+        <span btnlabel> Save</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-times-circle-o'" (onClick)="toggleMode()">
+        <span btnlabel> Cancel</span>
+    </tl-button>
+</div>
+<!-- <tl-training-lib-search *ngIf="!loading"> </tl-training-lib-search> -->
+<tl-training-lib-search #searchComp></tl-training-lib-search>
+<tl-training-lib-list *ngIf="!loading" [mode]="mode" [searchText]="searchComp.search"></tl-training-lib-list>
+

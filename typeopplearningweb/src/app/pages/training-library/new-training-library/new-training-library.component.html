@@ -1,0 +1,39 @@
+
+<div class="title-area">
+  <div class="heading">
+    <span class="title-text">New Training Library</span>
+    <!-- <div class="spacer"></div> -->
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="createTrainingLibrary()">
+  <div class="content-area">
+    <div>
+        <input type="text" class="form-control" placeholder="Training Name" formControlName="name" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Equipment Category" formControlName="equipmentCategory" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Equipment Type" formControlName="equipmentType" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Manufacturer" formControlName="manufacturer" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Model" formControlName="model" required>
+    </div>
+    <div>
+        <input type="date"  class="form-control" placeholder="Date" formControlName="date" required>
+    </div>
+    <div class="button-area">
+        <button type="submit" class="tl-modal-button">
+            <div class="btn-label">Create</div>
+        </button>
+    </div>
+  </div>
+  </form>
+

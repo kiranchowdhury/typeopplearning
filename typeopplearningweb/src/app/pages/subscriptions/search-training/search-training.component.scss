@@ -1,0 +1,32 @@
+.searchBar input {
+    border-radius: 2px;
+    border: solid 1px #cccccc;
+    width: 100%;
+    height: 40px;
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666666;
+  }
+  
+  .searchBar{
+    flex-grow: 78;
+  }
+  
+  .searchContainer{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2vh;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  tl-button-small{
+    flex-grow: 0;
+  }
+  

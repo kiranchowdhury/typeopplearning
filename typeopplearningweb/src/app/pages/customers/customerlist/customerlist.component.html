@@ -1,0 +1,57 @@
+<!-- <table class="table">
+<thead>
+    <tr>
+      <th scope="col">Customer name</th>
+      <th scope="col">Contact name</th>
+      <th scope="col">Users</th>
+    </tr>
+</thead>
+<tbody>
+  <tl-customer-item *ngFor="let cust of customers; let i = index" [customer]="cust" [i]="i"></tl-customer-item>
+</tbody>
+</table> -->
+
+<div class="searchContainer">
+  <div class="searchBar">
+      <input type="text" class="form-control" [(ngModel)]="searchStr"  placeholder="Search Customer">
+  </div>
+  <tl-button-small [icon]="'fa fa-search'" (onClick)="filterData()"></tl-button-small>
+</div>
+<pagination [totalItems]="customers.length" class="page-float" (pageChanged)="pageChanged($event)" ></pagination>
+<table class="table table-hover" matSort (matSortChange)="sortData($event)">
+    <thead>
+      <tr class="table-header">
+        <th mat-sort-header="name">Customer name</th>
+        <th mat-sort-header="contactName" >Contact name</th>
+        <th mat-sort-header="noOfUsers" >Users</th>
+        <th *ngIf="mode==='edit'" >Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of sortedData | customerFilter : filterText ">
+            <td *ngIf="mode==='view'">
+              <!-- <a class="user-anchor-style" (click)="customerDetailsGo(customer)">{{customer.name}}</a></td> -->
+              <a class="user-anchor-style" [routerLink]="['/pages/customers', customer._id, customer.name]">{{customer.name}}</a></td>
+            <td *ngIf="mode==='view'">{{customer.contactName}}</td>
+            <td *ngIf="mode==='view'">{{customer.noOfUsers}}</td>
+            <td *ngIf="mode==='edit'"><input class="form-control" type="text" (change)="getChangedId(customer)" [(ngModel)]="customer.name" #nameedit></td>
+            <td *ngIf="mode==='edit'"><input class="form-control" type="text" (change)="getChangedId(customer)" [(ngModel)]="customer.contactName" #contctnameedit></td>
+            <td *ngIf="mode==='edit'"><input class="form-control" type="text" (change)="getChangedId(customer)" [(ngModel)]="customer.noOfUsers" #nouseredit></td>
+            <td *ngIf="mode==='edit'">
+                <a (click)="onRemoveCustomer(customer)"><i class="fa fa-times-circle ic_close_edit_view"></i></a>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+   <!-- <ag-grid-angular style="width: 100%; height: 80%" class="ag-theme-blue"
+    [gridOptions]="gridoptions"
+    [columnDefs]="columnDefs"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [enableColResize]="true"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [defaultColDef]="defaultColumnDef"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>  -->
+

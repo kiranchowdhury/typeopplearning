@@ -1,0 +1,7 @@
+<button
+(click)="handleClick($event)"
+type="{{type || 'button'}}"
+class="btn-default">
+<i class="icon-style {{icon}}"></i>
+<ng-content select=[btnlabel]></ng-content>
+</button>

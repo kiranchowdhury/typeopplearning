@@ -1,0 +1,39 @@
+
+<div class="title-area">
+  <div class="heading">
+    <span class="title-text">New Customer</span>
+    <!-- <div class="spacer"></div> -->
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="createCustomer()">
+  <div class="content-area">
+    <div>
+        <input type="text" class="form-control" placeholder="Customer Name" formControlName="name" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Contact Name" formControlName="contactName" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Email" formControlName="email" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Phone" formControlName="phone" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Address" formControlName="address" required>
+    </div>
+    <div>
+        <input type="text"  class="form-control" placeholder="Users" formControlName="noOfUsers" required>
+    </div>
+    <div class="button-area">
+        <button type="submit" class="tl-modal-button" (click)="createCustomer()">
+            <div class="btn-label">Create</div>
+        </button>
+    </div>
+  </div>
+  </form>
+

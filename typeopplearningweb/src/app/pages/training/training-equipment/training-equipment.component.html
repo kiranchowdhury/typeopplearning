@@ -1,0 +1,14 @@
+<div class="div-top-margin">
+  <p>Choose an equipment category:</p>
+</div>
+<div class="row" *ngFor="let equipmentCat of equipmentCategoryList">
+  <div class="col-md-6">
+      <mat-card class="card-list-style">
+          <i class="{{equipmentCat.equimentIcon}} class-list-padding" ></i>
+            <a class="anchor-text-style" href="{{urlHash}}/{{equipmentCat.categoryAlias}}">{{equipmentCat.categoryName}}</a>
+          <i class="fa fa-angle-right class-align-right"></i>
+        </mat-card>
+  </div>
+  <div class="col-md-6"></div>
+
+</div>

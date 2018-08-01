@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead>
+    <tr class="table-header">
+      <th scope="col">Status</th>
+      <th scope="col">Training Name</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let certificate of certificates">
+          <td><tl-status-dot [status]="certificate.status"></tl-status-dot></td>
+          <td>{{certificate.trainingName}}</td>
+          <td>
+            <tl-button class="btn-120w" [icon]="'fa fa-folder-open-o'">
+              <span btnlabel> Open PDF</span>
+          </tl-button>
+          <tl-button class="btn-120w" [icon]="'fa fa-share'">
+            <span btnlabel> Share</span>
+        </tl-button>
+          </td>
+      </tr>
+  </tbody>

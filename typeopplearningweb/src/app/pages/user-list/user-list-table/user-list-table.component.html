@@ -1,0 +1,21 @@
+<table class="table table-hover">
+  <thead>
+    <tr class="table-header">
+      <th scope="col">User Name</th>
+      <th scope="col">No. of Trainings</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of userList | userFilter: searchText">
+           <td *ngIf="mode==='view'"><a class="user-anchor-style" href="{{pathHsh}}/{{user._id}}">{{user.fullname}}</a></td>
+          <td *ngIf="mode==='view'">{{user.employeetrainings.length}}</td>
+          <td *ngIf="mode==='view'"><tl-status-dot [status]="'in progress'">1</tl-status-dot></td>
+          <td *ngIf="mode==='edit'"><input class="form-control" type="text" (ngModelChange)="trackChange($event, user)" [(ngModel)]="user.fullname"></td>
+          <td *ngIf="mode==='edit'"><input class="form-control" type="text" [value]="user.employeetrainings.length" disabled="disabled"></td>
+          <td *ngIf="mode==='edit'">
+              <a (click)="onRemoveUser(user)"><i class="fa fa-times-circle ic_close_edit_view"></i></a>
+          </td>
+      </tr>
+  </tbody>
+</table>

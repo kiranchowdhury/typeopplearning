@@ -1,0 +1,78 @@
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+// framework component themes (styles tied to theme variables)
+// @import '~@nebular/theme/styles/globals';
+@import '../../../framework/theme/styles/_globals.scss';
+// @import '~@nebular/auth/styles/all';
+@import '../../../framework/theme/styles/_all.scss';
+
+// loading progress bar theme
+@import './pace.theme';
+
+@import './bootstrap-rtl';
+
+//toastr
+@import "~ngx-toastr/toastr.css";
+// bootstrap style toast
+// or import a bootstrap 4 alert styled design (SASS ONLY)
+// should be after your bootstrap imports, it uses bs4 variables, mixins, functions
+@import "~ngx-toastr/toastr-bs4-alert";
+
+// if you'd like to use it without importing all of bootstrap it requires
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~ngx-toastr/toastr-bs4-alert";
+
+/** TL SPECIFIC STYLES ***/
+.tl-modal-button {
+  cursor: pointer;
+  width: 380px;
+  height: 60px;
+  border-radius: 2px;
+  background-image: linear-gradient(279deg, #0f72e2, #09d1d6);
+}
+
+/** AG GRID CUSTOMIZATION - TO TURN THE DATA TABLE INTO CARBON  DATA TABLE */
+$ag-mat-icons-path: "~ag-grid/src/styles/material-icons/";
+$ag-icons-path: "~ag-grid/src/styles/icons/";
+$font-family: 'Roboto';
+$font-size: 16px;
+$font-weight: 600;
+$grid-size: 6px;
+// $header-background-color: #f0f3f6;
+// $ag-range-selected-color-1: #5596e6;
+// $accent-color: #3d70b2;
+// $border-color: #f4f7fb;
+// // $border-color: #3d70b2;
+// $cell-highlight-border: #3d70b2;
+// $cell-horizontal-border: #3d70b2;
+  // $odd-row-background-color: #f0f3f6;
+// $secondary-font-family: $font-family;
+    $secondary-font-size: 16px;
+    $secondary-font-weight: 600;
+// $disabled-foreground-color-opacity: 1;
+@import '~ag-grid/src/styles/ag-grid';
+// @import '~ag-grid/src/styles/ag-theme-material';
+@import '~ag-grid/src/styles/ag-theme-blue';
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  // @include nb-auth-global();
+
+  // loading progress bar
+  @include ngx-pace-theme();
+
+  // fixed in rc.9 and can be removed after upgrade
+  .custom-control .custom-control-indicator {
+    border-radius: 50%; // TODO: quickfix for https://github.com/akveo/nebular/issues/275
+  }
+  @include bootstrap-rtl();
+};
+
+/* MATERIAL*/
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';

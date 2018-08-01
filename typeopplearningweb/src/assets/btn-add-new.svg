@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164" height="40" viewBox="0 0 164 40">
+    <defs>
+        <linearGradient id="a" x1="50%" x2="50%" y1="2.946%" y2="98.147%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#EAF6FF"/>
+        </linearGradient>
+        <rect id="b" width="164" height="40" rx="2"/>
+        <path id="c" d="M10 .313A9.686 9.686 0 0 0 .312 10 9.686 9.686 0 0 0 10 19.688 9.686 9.686 0 0 0 19.688 10 9.686 9.686 0 0 0 10 .312zm0 17.5A7.81 7.81 0 0 1 2.187 10 7.81 7.81 0 0 1 10 2.187 7.81 7.81 0 0 1 17.813 10 7.81 7.81 0 0 1 10 17.813zm4.53-6.72h-3.436v3.437c0 .26-.21.47-.47.47H9.376a.47.47 0 0 1-.47-.47v-3.436H5.47a.47.47 0 0 1-.47-.47V9.376c0-.26.21-.47.47-.47h3.436V5.47c0-.26.21-.47.47-.47h1.248c.26 0 .47.21.47.47v3.436h3.436c.26 0 .47.21.47.47v1.248c0 .26-.21.47-.47.47z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <use fill="url(#a)" xlink:href="#b"/>
+            <rect width="163" height="39" x=".5" y=".5" stroke="#0F72E2" rx="2"/>
+        </g>
+        <g transform="rotate(90 27 37)">
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <use fill="#000" fill-rule="nonzero" xlink:href="#c"/>
+            <g fill="#0F72E2" mask="url(#d)">
+                <path d="M0 0h20v20H0z"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<table class="table table-hover">
+  <thead>
+    <tr class="table-header">
+      <th scope="col">Training Name</th>
+      <th scope="col">Status</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let training of userTrainings">
+          <td (click)="training.status=='waiting'&&openUpdateDialog(training)" [ngClass]="{'user-training-cursor': training.status=='waiting'}">{{training.trainingdetails.name}}</td>
+          <td (click)="training.status=='waiting'&&openUpdateDialog(training)" [ngClass]="{'user-training-cursor': training.status=='waiting'}"><tl-status-dot [status]="training.status"></tl-status-dot> {{training.status}}</td>
+      </tr>
+      <div class="container text-center" style="padding: 20px;" *ngIf="!userTrainings.length"> No Training subscribed !!</div>
+  </tbody>
+</table>

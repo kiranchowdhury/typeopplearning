@@ -1,0 +1,42 @@
+<div class="header-container left">
+  <div class="logo-containter">
+    <a (click)="toggleSidebar()" href="#" class="navigation" *ngIf="authenticated">
+      <i class="nb-menu"></i>
+    </a>
+    <div class="logo" (click)="goToHome()">Typeopplearing.no</div>
+  </div>
+  <!-- <ngx-theme-switcher></ngx-theme-switcher> -->
+  <!-- <ngx-layout-direction-switcher></ngx-layout-direction-switcher> -->
+</div>
+
+<nb-actions size="medium" class="header-container right">
+  <nb-action *ngIf="authenticated">
+    <div class="loggedInUserDiv" >
+        <a (click)=showLoggedInOption()>
+            <i class="fa fa-user-circle-o" style="font-size:36px"></i>
+            <div>
+              <span> &nbsp;{{currentUser.name}} &nbsp; </span>
+              <font> &nbsp;{{currentUser.role | uppercase}} &nbsp; </font>
+
+            </div>
+            <i class="fa fa-angle-down"></i>
+
+        </a>
+
+        <ul id="myDropdown" class="dropdown-content">
+            <li><a href="/#/pages/profiles">Profile</a></li>
+            <li><a (click)=logOut()>Logout</a></li>
+        </ul>
+    </div>
+  </nb-action>
+
+  <nb-action *ngIf="!authenticated" >
+    <button type="button" class="btn btn-secondary" (click)="openLoginModal()">SIGN IN</button>
+  </nb-action>
+  <nb-action *ngIf="!authenticated">
+    <button type="button" class="btn btn-secondary" (click)="openSignupModal()">SIGN UP</button>
+  </nb-action>
+  <!-- <nb-action class="control-item">
+    <nb-search type="rotate-layout" (click)="startSearch()"></nb-search>
+  </nb-action> -->
+</nb-actions>

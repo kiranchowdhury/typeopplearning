@@ -1,0 +1,31 @@
+
+<div class="title-area">
+  <div class="heading">
+    <span class="title-text">New User</span>
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="createUser()">
+  <div class="content-area">
+    <div>
+        <input type="text" class="form-control" placeholder="Full Name" formControlName="fullname" required>
+    </div>
+    <div>
+      <input type="text"  class="form-control" placeholder="Email Id" formControlName="email" required>
+  </div>
+  <div>
+    <input type="text"  class="form-control" placeholder="Address" formControlName="address" required>
+</div>
+
+
+    <div class="button-area">
+        <button type="submit" class="tl-modal-button" (click)="createUser()">
+            <div class="btn-label">Create</div>
+        </button>
+    </div>
+  </div>
+  </form>
+

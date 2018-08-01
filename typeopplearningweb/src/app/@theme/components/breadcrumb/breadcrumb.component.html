@@ -1,0 +1,10 @@
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb ol-list-style">
+      <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+      <li *ngFor="let item of breadcrumbs" class="breadcrumb-item" [ngClass]="{'active': item.actice}">
+          <a class="li-list-style" [routerLink]='item.link'>{{item.name}}</a> </li>
+    </ol>
+  </nav>

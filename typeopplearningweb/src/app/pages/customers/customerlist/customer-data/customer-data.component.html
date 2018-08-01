@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6">
+      <!-- <nav aria-label="breadcrumb">
+          <ol class="breadcrumb ol-list-style">
+            <li  *ngFor="let item of breadcrumbs" class="breadcrumb-item" [ngClass]="{'active': item.active}">
+                <a class="li-list-style" [routerLink]='item.link'>{{item.name }}</a> </li>
+          </ol>
+        </nav> -->
+        <tl-breadcrumb [breadcrumbs]="breadcrumbs"></tl-breadcrumb>
+  </div>
+  <div class="col-md-6 " *ngIf="mode==='view'">
+      <tl-button [icon]="'fa fa-edit'" class="btn-float-style" (onClick)="toggleMode()">
+          <span btnlabel> Edit</span>
+      </tl-button>
+  </div>
+  <div class="col-md-6"  *ngIf="mode==='edit'">
+    <div class="btn-float-style">
+        <tl-button [icon]="'fa fa-check-circle-o'" (click)="saveCustomer()">
+            <span btnlabel> Save</span>
+        </tl-button>
+        <tl-button [icon]="'fa fa-times-circle-o'" (onClick)="toggleMode()">
+            <span btnlabel> Cancel</span>
+        </tl-button>
+    </div>
+  </div>
+</div>
+
+<tl-customer-data-detail [mode]="mode"></tl-customer-data-detail>

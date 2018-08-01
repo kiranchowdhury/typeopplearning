@@ -1,0 +1,23 @@
+.red-dot {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(26, 163, 14);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.yellow-dot {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(255, 187, 0);
+  border-radius: 50%;
+  display: inline-block;
+}

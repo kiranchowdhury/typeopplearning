@@ -1,0 +1,7 @@
+<ep-busy-indicator *ngIf="loading" [loadingMsg]="loadingMsg"></ep-busy-indicator>
+<div class="tab-title">
+    <p>Certificate List</p>
+</div>
+<tl-certificate-list *ngIf="!loading">
+
+</tl-certificate-list>

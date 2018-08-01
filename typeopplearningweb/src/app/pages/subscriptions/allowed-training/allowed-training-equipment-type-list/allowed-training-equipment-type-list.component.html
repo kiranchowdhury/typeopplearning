@@ -1,0 +1,46 @@
+<div class="col-md-6 div-margin ">
+  <mat-chip-list>
+      <mat-chip class="equipment-cat-height" (click)="showEquipmentType()"><p class="equipment-font-size">
+        <i class="{{equipmentCategory.equipmentIcon}} class-list-padding" ></i> {{equipmentCategory.equipmentCategory}}</p></mat-chip>
+      <mat-chip class="equipment-cat-height no-display" [ngClass]="{'diplay-block': showManufacturer}"><p class="equipment-font-size-1">
+          <!-- <i class="{{equipmentCategory.equipmentIcon}} class-list-padding" ></i> -->
+          {{selectedEquipmentType}}</p></mat-chip>
+    </mat-chip-list>
+</div>
+<div class="row" [ngClass]="{'no-display' : showManufacturer}">
+  <div class="col-md-12 equipment-type-margin"><p class="p-padding"><b> Type of Equipment </b></p></div>
+
+  <div class="col-md-12 equipment-type-list-margin">
+      <mat-card (click)="showManufacture(equipType)" class="mat-card-style" *ngFor="let equipType of equipmentTypes">
+        {{equipType.equipmentType}}</mat-card>
+
+  </div>
+
+
+</div>
+<div class="row no-display" [ngClass]="{'diplay-block': showManufacturer}">
+  <div class="col-md-12 equipment-type-margin"><p class="p-padding"><b> Select Manufacturer </b></p></div>
+
+  <div class="col-md-12 equipment-type-list-margin">
+      <mat-accordion>
+    <mat-expansion-panel class="listShadow" *ngFor="let manufactor of equipmentManufactor"
+    (opened)=" getEquipModel(manufactor)">
+        <mat-expansion-panel-header >
+
+          {{manufactor.equipmentManufact}}
+        </mat-expansion-panel-header>
+        <ul class="ul-islt-type">
+          <li class="li-border-top" *ngFor="let equip of equipmentModels" >
+              <div class="row">
+                  <div class="col-md-8"><label class="label-text">{{equip.equipmentModel}}</label></div>
+
+              </div>
+
+          </li>
+
+      </ul>
+        </mat-expansion-panel>
+        </mat-accordion>
+
+</div>
+</div>

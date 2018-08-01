@@ -1,0 +1,23 @@
+
+<ep-busy-indicator *ngIf="loading" [loadingMsg]="loadingMsg"></ep-busy-indicator>
+
+<div class="customerAction" *ngIf="mode==='view'">
+    <tl-button [icon]="'fa fa-plus-circle'" (onClick)="openNewCustomerDialog()">
+        <span btnlabel> New</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-edit'" (onClick)="toggleMode()">
+        <span btnlabel> Edit</span>
+    </tl-button>
+</div>
+<div class="customerAction" *ngIf="mode==='edit'">
+    <tl-button [icon]="'fa fa-check-circle-o'" (click)="saveUpdatedList()">
+        <span btnlabel> Save</span>
+    </tl-button>
+    <tl-button [icon]="'fa fa-times-circle-o'" (onClick)="toggleMode()">
+        <span btnlabel> Cancel</span>
+    </tl-button>
+</div>
+<!-- <tl-customer-search *ngIf="!loading"></tl-customer-search> -->
+<tl-customerlist *ngIf="!loading" [mode]="mode"  (removeCustomerEvent)="handleRemoveCustomer($event)" ></tl-customerlist>
+
+<!-- <tl-remove-confirmation (removeCustomerEvent)="handleRemoveCustomer($event)"></tl-remove-confirmation> -->
